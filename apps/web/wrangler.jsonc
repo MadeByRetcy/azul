@@ -6,7 +6,7 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
-	"route": "azul.msharf.in",
+	"route": "azulflawn.msharf.in",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],

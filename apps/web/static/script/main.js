@@ -21,7 +21,7 @@
             const match = element.className.match(regex);
             if (match) {
                 const iconName = match[0].split(':')[1];
-                const url = `https://azul.msharf.in/registry/fetch?ic=${iconName}`;
+                const url = `https://azulflawn.msharf.in/registry/fetch?ic=${iconName}`;
                 element.style.webkitMaskImage = `url(${url})`;
                 element.style.maskImage = `url(${url})`;
             }

@@ -28,9 +28,9 @@
 
     <div class="bg-sky-50 flex items-center justify-between rounded-2xl p-4 my-4">
         <code class="block">
-            <span class="text-slate-400">&lt;</span><span class="text-blue-500">script</span> defer src<span class="text-slate-400">=</span><span class="text-sky-500">"https://azul.msharf.in/script/main.js"</span><span class="text-slate-400">&gt;</span><span class="text-slate-400">&lt;/</span><span class="text-blue-500">script</span><span class="text-slate-400">&gt;</span>
+            <span class="text-slate-400">&lt;</span><span class="text-blue-500">script</span> defer src<span class="text-slate-400">=</span><span class="text-sky-500">"https://azulflawn.msharf.in/script/main.js"</span><span class="text-slate-400">&gt;</span><span class="text-slate-400">&lt;/</span><span class="text-blue-500">script</span><span class="text-slate-400">&gt;</span>
         </code>
-        <button onclick={() => {navigator.clipboard.writeText("<script defer src='https://azul.msharf.in/script/main.js'></script>"); status = "copied"}} class="px-3 py-1 flex items-center border-2 border-blue-400 rounded-lg">
+        <button onclick={() => {navigator.clipboard.writeText("<script defer src='https://azulflawn.msharf.in/script/main.js'></script>"); status = "copied"}} class="px-3 py-1 flex items-center border-2 border-blue-400 rounded-lg">
             <span class="icon-[charm--link-external] me-2 text-sky-500"></span>
             <span>{!status ? "Copy" : "Copied!"}</span>
         </button>
