@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@plugin "@iconify/tailwind4";
+
+@theme {
+    --font-base: "Inter", "Noto Color Emoji", sans-serif;
+    --font-mono: "IBM Plex Mono", "Noto Color Emoji", monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100dvh;
+  width: 100dvw;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: theme(--font-base);
+}
+
+button {
+    cursor: pointer;
+}
