@@ -8,9 +8,8 @@
 
 <svelte:head>
 	<link rel="icon" href="/icon.webp" />
-	<title>Azul | Moroccan Icons for the Digital Age.</title>
+	<title>Azul | Moroccan Icons for the Digital Age</title>
 
-	<!-- Preview Embeds  -->
 	<meta property="og:title" content="Azul | Moroccan Icons for the Digital Age." />
 	<meta property="og:description" content="Enjoy a selection of high quality, modern icons inspired by Moroccan culture." />
 	<meta property="og:image" content="/icon.webp" />
