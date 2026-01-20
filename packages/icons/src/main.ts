@@ -1,20 +1,19 @@
-import fs from "fs"
-import path from "path"
+const iconRegistry: Record<string, string> = import.meta.glob("./line/*.svg", { as: "raw", eager: true }) as Record<string, string>;
+
+const iconNames = Object.keys(iconRegistry).map(path => {
+  return path.split("/").pop()?.replace(".svg", "") || "";
+}).filter(Boolean);
 
 export function loadLineIcons(): string[] {
-  let iconList: string[] = []
-  fs.readdirSync(path.join(import.meta.dirname, "./line")).forEach(file => {
-    const iconName = file.replace(".svg", "")
-    iconList.push(iconName)
-  })
-
-  return iconList
+  return iconNames;
 }
 
 export function fetchIconByName(name: string): string | undefined {
-  const iconPath = path.join(import.meta.dirname, "./line/", `${name}.svg`)
-  const icon = fs.readFileSync(iconPath, "utf-8")
+  const iconPath = `./line/${name}.svg`;
+  const icon = iconRegistry[iconPath];
+  
+  if (!icon) return undefined;
+  
   const base64 = btoa(icon);
-
-  return `data:image/svg+xml;base64,${base64}`
+  return `data:image/svg+xml;base64,${base64}`;
 }
