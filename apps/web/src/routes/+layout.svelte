@@ -17,7 +17,7 @@
 	/>
 	<meta property="og:image" content="/icon.webp" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://azulflawn.msharf.in" />
+	<meta property="og:url" content="https://azul.msharf.in" />
 
 	<script defer src="{page.url.origin}/script/main.js"></script>
 </svelte:head>
