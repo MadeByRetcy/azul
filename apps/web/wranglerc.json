@@ -1,0 +1,18 @@
+{
+	"name": "azul",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2025-11-17",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"route": "azul.msharf.in",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"keep_vars": true,
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1
+	}
+}
