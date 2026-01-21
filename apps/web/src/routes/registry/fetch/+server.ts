@@ -1,4 +1,3 @@
-// Get request that receives searchparam ic and fetches the registry data and returns it as base64
 import { fetchIconByName } from '@azul/icons'
 import type { RequestHandler } from './$types';
 
@@ -6,6 +5,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const data = fetchIconByName(url.searchParams.get('ic') || '');
 
     if (data) {
+        // Decode base64 data URL to get raw SVG content, removing this results in issues with mime types
         const base64Content = data.split(',')[1];
         const buffer = Buffer.from(base64Content, 'base64');
 

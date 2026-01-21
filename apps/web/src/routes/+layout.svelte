@@ -43,10 +43,10 @@
 			<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
 			<span>Docs</span>
 		</a>
-		<!-- <a href="#" class="me-8 flex items-center">
+		<a href="https://github.com/MadeByRetcy/azul" class="me-8 flex items-center">
 			<span class="icon-[charm--github] text-blue-500 me-1"></span>
 			<span>Github</span>
-		</a> -->
+		</a>
 		<!-- <a
 			href="/itri"
 			class="flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
