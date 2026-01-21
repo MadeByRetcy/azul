@@ -20,6 +20,7 @@
 	<meta property="og:url" content="https://azul.msharf.in" />
 
 	<script defer src="{page.url.origin}/script/main.js"></script>
+	<link rel="stylesheet" href="{page.url.origin}/script/main.css">
 </svelte:head>
 
 <header class="relative md:mx-30 md:py-10 mx-8 py-8 p flex items-center justify-between">
@@ -32,14 +33,14 @@
 		</span>
 	{/if}
 	<a href="/">
-		<img src="/icon.webp" alt="Azul Logo" class="size-10" />
+		<img src="/icon.webp" alt="Azul Logo" class="md:size-10 size-8" />
 	</a>
-	<div class="flex text-lg font-medium">
-		<a href="/registry" class="me-8 flex items-center">
+	<div class="flex md:text-lg font-medium">
+		<a href="/registry" class="md:me-8 me-4 flex items-center">
 			<span class="me-1 icon-[charm--layout-dashboard] text-blue-500"></span>
 			<span>Registry</span>
 		</a>
-		<a href="/docs" class="me-8 flex items-center">
+		<a href="/docs" class="md:me-8 me-4 flex items-center">
 			<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
 			<span>Docs</span>
 		</a>
