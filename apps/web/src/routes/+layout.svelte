@@ -39,11 +39,11 @@
 			<span class="me-1 icon-[charm--layout-dashboard] text-blue-500"></span>
 			<span>Registry</span>
 		</a>
-		<a href="/docs" class="flex items-center">
+		<a href="/docs" class="me-8 flex items-center">
 			<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
 			<span>Docs</span>
 		</a>
-		<a href="https://github.com/MadeByRetcy/azul" class="me-8 flex items-center">
+		<a href="https://github.com/MadeByRetcy/azul" class="flex items-center">
 			<span class="icon-[charm--github] text-blue-500 me-1"></span>
 			<span>Github</span>
 		</a>
