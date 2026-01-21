@@ -31,7 +31,7 @@ The project is a monorepo, with plenty of room to expand to in the immediate fut
 | App/Package | Description |
 |----------|------------------|
 | [web](https://github.com/MadeByRetcy/azul/tree/stable/apps/web) | Contains the main website of the project (SvelteKit + TailwindCSS). |
-| [@azul/icons](https://github.com/MadeByRetcy/azul/tree/stable/packages/icons) | Contains the line icons (.svgs) and serving logic (Typescript). |
+| [@azul/icons](https://github.com/MadeByRetcy/azul/tree/stable/packages/icons) | Contains the line icons (.svg) and serving logic (Typescript). |
 
 To contribute to the website or any non-icon asset, please follow these basic rules:
 - Try your best to **account for edge cases** in code, if you can't you can try to extensively test your code to find those edge cases.
