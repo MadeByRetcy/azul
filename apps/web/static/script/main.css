@@ -1,0 +1,10 @@
+span[class*="az-ico:"] {
+    background-color: currentColor; 
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: cover;
+}
