@@ -12,7 +12,8 @@ export const GET: RequestHandler = async ({ url }) => {
         return new Response(buffer, {
             headers: {
                 'Content-Type': 'image/svg+xml',
-                'Content-Length': buffer.length.toString()
+                'Content-Length': buffer.length.toString(),
+                'Access-Control-Allow-Origin': '*'
             }
         });
     } else {
