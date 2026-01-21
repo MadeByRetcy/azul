@@ -3,7 +3,7 @@
 </script>
 
 
-<div in:fly={{ y: 15 }} class="mx-30 z-0 flex flex-1 pb-24 pt-12 flex-col items-center justify-center">
+<div in:fly={{ y: 15 }} class="md:mx-30 mx-8 z-0 flex flex-1 pb-24 pt-12 flex-col items-center justify-center">
 
     <div class="text-sm font-semibold tracking-widest flex items-center px-4 py-1 border-2 rounded-full border-sky-200 mb-3 text-blue-500">
         <span class="me-2 icon-[charm--conical-flask] text-sky-500"></span>
@@ -13,7 +13,7 @@
         Empowering The Moroccan <br>
         Digital Future
     </h1>
-    <p class="text-lg text-slate-400 mb-5 mt-2">Enjoy a selection of high quality, modern icons inspired by Moroccan culture.</p>
+    <p class="text-lg text-slate-400 mb-5 mt-2 text-center">Enjoy a selection of high quality, modern icons inspired by Moroccan culture.</p>
     
     <!-- <div class="flex items-center border-2 rounded-full border-slate-200">
         <input 
@@ -33,28 +33,28 @@
 
 </div>
 
-<div in:fly={{ y: 15 }} class="mx-30 flex items-center justify-center pb-12">
-    <h2 class="uppercase font-semibold tracking-widest text-slate-400 me-4">Used by people at</h2>
+<div in:fly={{ y: 15 }} class="md:mx-30 mx-8 flex items-center justify-center pb-12">
+    <h2 class="uppercase md:text-base text-sm font-semibold tracking-widest text-slate-400 me-4">Used by people at</h2>
 
-    <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="h-6">
+    <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="md:h-6 h-4">
 </div>
 
-<div in:fly={{ y: 15 }} class="flex mx-30">
-    <div class="w-1/3 p-8 rounded-4xl bg-blue-100 me-3">
+<div in:fly={{ y: 15 }} class="flex not-md:flex-col md:mx-30 mx-8">
+    <div class="md:w-1/3 p-8 rounded-4xl bg-blue-100 md:me-3 md:mt-0 mt-3">
         <div class="bg-blue-600 rounded-xl flex items-center justify-center size-12 mb-3">
             <span class="az-ico:riads text-blue-100 text-xl"></span>
         </div>
         <h2 class="text-xl text-blue-600 font-semibold mb-2">Universal</h2>
         <p class="text-lg text-blue-500">Icons that are framework and environment agnostic, you only need a script tag and you're good to go!</p>
     </div>
-    <div class="w-1/3 p-8 rounded-4xl bg-sky-100 me-3">
+    <div class="md:w-1/3 p-8 rounded-4xl bg-sky-100 md:me-3 md:mt-0 mt-3">
         <div class="bg-sky-600 rounded-xl flex items-center justify-center size-12 mb-3">
             <span class="az-ico:appearance text-blue-100 text-xl"></span>
         </div>
-        <h2 class="text-xl font-semibold mb-2 text-sky-600">Sleek & Modern</h2>
+        <h2 class="text-xl font-semibold mb-2 text-sky-600 md:mt-0 mt-3">Sleek & Modern</h2>
         <p class="text-lg text-sky-500">Designed with the latest design trends in mind, Azul icons fit perfectly in any modern application.</p>
     </div>
-    <div class="w-1/3 p-8 rounded-4xl bg-cyan-100/50">
+    <div class="md:w-1/3 p-8 rounded-4xl bg-cyan-100/50 md:mt-0 mt-3">
         <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
             <span class="az-ico:flag-morocco text-blue-100 text-xl"></span>
         </div>

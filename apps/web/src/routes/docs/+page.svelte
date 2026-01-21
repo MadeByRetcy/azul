@@ -9,17 +9,17 @@
     
 </div>
 
-<div in:fly={{ y: 15 }} class="mx-30 z-0 flex flex-1 pb-6 pt-6 flex-col items-center justify-center">
+<div in:fly={{ y: 15 }} class="md:mx-30 mx-8 z-0 flex flex-1 pb-6 pt-6 flex-col items-center justify-center">
 
     <h1 class="text-3xl text-center font-bold">
         Have questions?
         We got answers!
     </h1>
-    <p class="text-lg text-slate-400 mt-2">Everything you need about Azul and Azul Itri subscription.</p>
+    <p class="text-lg text-slate-400 mt-2 text-center">Everything you need about Azul and Azul Itri subscription.</p>
 
 </div>
 
-<div class="mx-30">
+<div class="md:mx-30 mx-8 mt-4 md:mt-0">
     <h1 class="flex items-center text-2xl font-semibold mb-3">
         <span class="az-ico:download text-3xl me-2 text-blue-500"></span>
         <span>Get started</span>

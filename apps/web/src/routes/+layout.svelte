@@ -22,7 +22,7 @@
 	<script defer src="{page.url.origin}/script/main.js"></script>
 </svelte:head>
 
-<header class="relative mx-12 flex items-center justify-between px-18 py-10">
+<header class="relative md:mx-30 md:py-10 mx-8 py-8 p flex items-center justify-between">
 	{#if navigating.complete}
 		<span
 			transition:fade={{ duration: 100 }}
@@ -39,7 +39,7 @@
 			<span class="me-1 icon-[charm--layout-dashboard] text-blue-500"></span>
 			<span>Registry</span>
 		</a>
-		<a href="/docs" class="me-8 flex items-center">
+		<a href="/docs" class="flex items-center">
 			<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
 			<span>Docs</span>
 		</a>
@@ -47,13 +47,13 @@
 			<span class="icon-[charm--github] text-blue-500 me-1"></span>
 			<span>Github</span>
 		</a> -->
-		<a
+		<!-- <a
 			href="/itri"
 			class="flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
 		>
 			<span class="me-1 icon-[charm--north-star] text-sky-200"></span>
 			<span>Go <span class="font-semibold">Itri</span></span>
-		</a>
+		</a> -->
 	</div>
 </header>
 
@@ -61,13 +61,13 @@
 	{@render children()}
 </section>
 
-<footer class="mx-12 flex items-center justify-between px-18 py-10">
-	<div class="text-sm text-slate-400">
-		<img src="/author.webp" alt="Made by Retcy Logo" class="h-4" />
+<footer class="md:mx-30 mx-8 flex items-center justify-between py-10">
+	<div class="md:text-sm text-xs text-slate-400">
+		<img src="/author.webp" alt="Made by Retcy Logo" class="md:h-4 h-3" />
 		<p>&copy; {new Date().getFullYear()}, All rights reserved</p>
 	</div>
 
-	<img src="/morocco.webp" class="h-10" alt="Made in Morocco" />
+	<img src="/morocco.webp" class="md:h-10 h-6" alt="Made in Morocco" />
 </footer>
 
 <style>
