@@ -5,14 +5,9 @@ export const GET: RequestHandler = async ({ url }) => {
     const data = fetchIconByName(url.searchParams.get('ic') || '');
 
     if (data) {
-        // Decode base64 data URL to get raw SVG content, removing this results in issues with mime types
-        const base64Content = data.split(',')[1];
-        const buffer = Buffer.from(base64Content, 'base64');
-
-        return new Response(buffer, {
+        return new Response(Buffer.from(data, "base64"), {
             headers: {
                 'Content-Type': 'image/svg+xml',
-                'Content-Length': buffer.length.toString(),
                 'Access-Control-Allow-Origin': '*'
             }
         });

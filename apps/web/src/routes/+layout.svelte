@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
-	import './layout.css';
-	import { navigating, page } from '$app/state';
+	import { fade } from 'svelte/transition'
+	import './layout.css'
+	import { navigating, page } from '$app/state'
 
-	let { children } = $props();
+	let { children, data } = $props()
 </script>
 
 <svelte:head>
@@ -42,19 +42,25 @@
 		</a>
 		<a href="/docs" class="md:me-8 me-4 flex items-center">
 			<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
-			<span>Docs</span>
+			<span class="hidden md:inline">Docs</span>
 		</a>
-		<a href="https://github.com/MadeByRetcy/azul" class="flex items-center">
+		<a href="https://github.com/MadeByRetcy/azul" class="flex items-center md:me-8 me-4">
 			<span class="icon-[charm--github] text-blue-500 me-1"></span>
-			<span>Github</span>
+			<span class="hidden md:inline">Github</span>
 		</a>
-		<!-- <a
-			href="/itri"
+		<a
+			href={data.session ? "/itri/dashboard" : "/itri"}
 			class="flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
 		>
 			<span class="me-1 icon-[charm--north-star] text-sky-200"></span>
-			<span>Go <span class="font-semibold">Itri</span></span>
-		</a> -->
+			<span>
+				{#if data.session}
+					<span class="font-semibold">Itri</span> dashboard
+				{:else}
+					Go <span class="font-semibold">Itri</span>
+				{/if}
+			</span>
+		</a>
 	</div>
 </header>
 
