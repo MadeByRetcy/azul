@@ -1,7 +1,7 @@
-import { loadLineIcons} from '@azul/icons'
+import { loadIcons } from '@azul/icons'
 
 export const load = async () => {
-    const lineIcons = loadLineIcons() 
+	const lineIcons = loadIcons()
 
-    return { lineIcons }
+	return { lineIcons }
 }

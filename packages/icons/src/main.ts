@@ -1,21 +1,69 @@
 /* 
   Cloudflare Workers doesn't support FS access, so we use Vite's import.meta.glob to import all SVGs at build time
 
-  NOTE: You would get an error in your IDE about glob, but it works fine during build and runtime as it is imported in a Vite environment (Web app)
+  NOTE: You would get an error in your IDE about glob if you remove @ts-ignore, but it works fine during build and runtime as it is imported in a Vite environment (Web app)
 */
-const iconRegistry: Record<string, string> = import.meta.glob("./line/*.svg", { as: "raw", eager: true }) as Record<string, string>;
 
-// Extract icon names from the file names in the current directory
-const iconNames = Object.keys(iconRegistry).map(path => {
-  return path.split("/").pop()?.replace(".svg", "") || "";
-}).filter(Boolean);
+const iconRegistry: {
+  line: Record<string, string>
+  duo: Record<string, string>
+  bold: Record<string, string>
+  boldDuo: Record<string, string>
+} = {
+  // @ts-ignore
+  line: import.meta.glob("./line/*.svg", {
+   	as: "raw",
+   	eager: true,
+   }) as Record<string, string>,
+  // @ts-ignore
+  duo: import.meta.glob("./duotone/*.svg", {
+    as: "raw",
+    eager: true,
+  }) as Record<string, string>,
+  // @ts-ignore
+  bold: import.meta.glob("./bold/*.svg", {
+    as: "raw",
+    eager: true,
+  }) as Record<string, string>,
+  // @ts-ignore
+  boldDuo: import.meta.glob("./boldDuo/*.svg", {
+    as: "raw",
+    eager: true,
+  }) as Record<string, string>
+}
 
-/** 
- * Returns a list of all available line icon names.
+interface iconListStruct {
+  name: string
+  duotone: boolean
+  bold: boolean
+  boldDuo: boolean
+}
+
+/**
+ * Returns a list of all available line icon names by checking all four dirs.
  * @returns An array of icon names.
-*/
-export function loadLineIcons(): string[] {
-  return iconNames;
+ */
+export function loadIcons(): iconListStruct[] {
+
+  const iconList = iconRegistry.line
+
+  let variantList: iconListStruct[] = []
+
+  Object.keys(iconList).map((icon) => {
+    const iconName = (path: string) => path.split("/").at(-1)?.split(".")[0] || ""
+    const lineIconName = iconName(icon)
+
+    const iconVariant = {
+      name: lineIconName,
+      duotone: Object.keys(iconRegistry.duo).some((di) => iconName(di) === lineIconName),
+      bold: Object.keys(iconRegistry.bold).some((bi) => iconName(bi) === lineIconName),
+      boldDuo: Object.keys(iconRegistry.boldDuo).some((bdi) => iconName(bdi) === lineIconName)
+    }
+
+    variantList.push(iconVariant)
+  })
+
+	return variantList
 }
 
 /**
@@ -24,17 +72,15 @@ export function loadLineIcons(): string[] {
  * @returns A base64-encoded data URL of the SVG icon, or undefined if not found.
  */
 export function fetchIconByName(name: string): string | undefined {
-  const iconPath = `./line/${name}.svg`;
-  const icon = iconRegistry[iconPath];
-  
-  if (!icon) return undefined;
+	const iconPath = `./line/${name}.svg`
+	const icon = iconRegistry.line[iconPath]
+
+	if (!icon) return undefined
 
   /* 
-    Convert SVG to base64 to use as data URL.
-    
-    To successfully render SVGs in all browsers, we need to encode them in base64 and 
-    then use mask-image to make it easy to deal with.
+    Convert SVG to base64.
+  
+    To successfully render SVGs in all browsers as data URI with the correct MIME Type.
   */
-  const base64 = btoa(icon);
-  return `data:image/svg+xml;base64,${base64}`;
+	return btoa(icon)
 }

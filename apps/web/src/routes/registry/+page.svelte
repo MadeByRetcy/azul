@@ -28,10 +28,10 @@
                 <div class="{ viewMode === "grid" ? "md:w-1/6 w-1/3" : "md:w-1/3 w-1/2"} transition-all md:mb-4 mb-1 md:pe-4 pe-1">
                     <div class="flex transition-all bg-white { viewMode === "grid" ? "flex-col py-6 md:px-2" : "justify-between py-4 px-6"} rounded-xl items-center">
                         <span 
-                            class="text-4xl az-ico:{icon} text-blue-800 {viewMode === "grid" ? "mb-2.5" : null} icon"
+                            class="text-4xl az-ico:{icon.name} text-blue-800 {viewMode === "grid" ? "mb-2.5" : null} icon"
                         >
                         </span>
-                        <p class="md:text-xs text-[0.5rem] {viewMode === "grid" ? "mt-2" : null} font-sans text-slate-400">{icon}</p>
+                        <p class="md:text-xs text-[0.5rem] {viewMode === "grid" ? "mt-2" : null} font-sans text-slate-400">{icon.name}</p>
                     </div>                    
                 </div>
             {/each}
