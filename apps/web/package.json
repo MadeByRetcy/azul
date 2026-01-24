@@ -36,5 +36,10 @@
 		"vite": "^7.2.6",
 		"vitest": "^4.0.15",
 		"vitest-browser-svelte": "^2.0.1"
+	},
+	"dependencies": {
+		"@paddle/paddle-js": "^1.6.1",
+		"@supabase/ssr": "^0.8.0",
+		"@supabase/supabase-js": "^2.91.1"
 	}
 }
