@@ -1,64 +1,128 @@
 <script lang="ts">
 	import { fly } from "svelte/transition"
+
+    const { data } = $props()
+    const { session } = $derived(data)
 </script>
 
 
-<div in:fly={{ y: 15 }} class="md:mx-30 mx-8 z-0 flex flex-1 pb-24 pt-12 flex-col items-center justify-center">
+<div in:fly={{ y: 15 }} class="gradientBlue md:px-30 px-8 z-0 flex flex-1 pb-18 pt-10 flex-col">
 
-    <div class="text-sm font-semibold tracking-widest flex items-center px-4 py-1 border-2 rounded-full border-sky-200 mb-3 text-blue-500">
-        <span class="me-2 icon-[charm--conical-flask] text-sky-500"></span>
-        <span>NOW IN BETA</span>
+    <div class="flex flex-col items-center justify-center mb-24">
+        <div class="text-sm w-fit font-bold font-mono tracking-widest flex items-center px-4 py-1 rounded-full bg-amber-100 mb-2 text-amber-500">
+            <span class="me-2 icon-[charm--conical-flask] text-amber-500"></span>
+            <span>BETA</span>
+        </div>
+        <h1 class="text-4xl font-bold text-center">
+            Make Your Apps <br>
+            Feel More Familiar
+        </h1>
+        <p class="text-lg text-slate-400 mb-4 mt-1 text-center">With <b>Azul</b>, The Modern & Culturally Inspired Icon Pack.</p>
+        <div class="flex items-center orderIcons">
+            <span class="az-ico:content-repost"></span>
+            <span class="az-ico:riads"></span>
+            <span class="az-ico:commerce-bag"></span>
+            <a
+                href={session ? "/itri/dashboard" : "/itri"}
+                class="flex items-center rounded-full hover:*:first:animate-spin bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+            >
+                <span class="me-2 icon-[charm--north-star] text-sky-200"></span>
+                <span>
+                    {#if session}
+                        <span class="font-semibold">Itri</span> Dashboard
+                    {:else}
+                        Subscribe to <span class="font-semibold">Itri</span>
+                    {/if}
+                </span>
+            </a> 
+            <span class="az-ico:home"></span>
+            <span class="az-ico:lang-translate"></span>
+            <span class="az-ico:content-edit"></span>       
+        </div>        
+        <p class="text-sm font-medium flex items-center text-slate-500 mt-2">
+            <a href="/registry" class="flex items-center me-1"><span class="az-ico:riad-join me-1"></span> <span>Use free icons</span></a> · <a href="https://github.com/MadeByRetcy/azul" class="underline flex items-center ms-1"><span class="icon-[bi--github] me-1.5"></span> <span>Contribute</span></a> 
+        </p>
     </div>
-    <h1 class="text-4xl text-center font-bold">
-        Empowering The Moroccan <br>
-        Digital Future
-    </h1>
-    <p class="text-lg text-slate-400 mb-5 mt-2 text-center">Enjoy a selection of high quality, modern icons inspired by Moroccan culture.</p>
-    
-    <!-- <div class="flex items-center border-2 rounded-full border-slate-200">
-        <input 
-            type="text"
-            class="py-3 px-6 rounded-s-full placeholder:text-slate-400"
-            placeholder="Get started here..."
-        >
-        <kbd class="px-1 mx-2 rounded-lg border-2 font-sans font-medium border-slate-200 text-slate-400">
-            Alt
 
-            K
-        </kbd>
-        <button aria-label="Go!" class="text-2xl rounded-full m-1 p-2 bg-blue-600 text-sky-200 flex items-center justify-center">
-            <span class="icon-[charm--search]"></span>
-        </button>
-    </div> -->
-
+    <div in:fly={{ y: 15 }} class="flex items-center justify-center text-sky-600/50">
+        <h2 class="uppercase text-sm font-semibold tracking-widest">Used by great people like</h2>
+        <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="h-4 mx-3 brightness-10">
+        <h2 class="uppercase text-sm font-semibold tracking-widest">and You</h2>
+    </div>
 </div>
 
-<div in:fly={{ y: 15 }} class="md:mx-30 mx-8 flex items-center justify-center pb-12">
-    <h2 class="uppercase md:text-base text-sm font-semibold tracking-widest text-slate-400 me-4">Used by people at</h2>
+<div in:fly={{ y: 15 }} class="bg-linear-to-b from-[#d6f5ff] to-transparent px-6">
+    <div class="bg-blue-500 md:px-24 px-8 md:py-14 flex flex-col items-center rounded-4xl">
+        <h1 class="font-semibold items-center flex-col text-white text-2xl mb-12 flex">
+            <span>Empowering The Moroccan Digital Transition</span>
+            <span class="text-sky-300 text-3xl icon-[mingcute--down-line]"></span>
+        </h1>
 
-    <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="md:h-6 h-4">
+        <div class="flex not-md:flex-col">
+            <div class="md:w-1/3 p-8 rounded-xl rounded-s-4xl bg-blue-50 md:me-3 md:mt-0 mt-3">
+                <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
+                    <span class="az-ico:riads text-blue-100 text-xl"></span>
+                </div>
+                <h2 class="text-xl text-blue-500 font-semibold mb-2">Universal</h2>
+                <p class="text-lg text-blue-400">Icons that are framework and environment agnostic, you only need a script tag and you're good to go!</p>
+            </div>
+            <div class="md:w-1/3 p-8 rounded-xl bg-sky-50 md:me-3 md:mt-0 mt-3">
+                <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
+                    <span class="az-ico:appearance text-blue-100 text-xl"></span>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 text-sky-500 md:mt-0 mt-3">Sleek & Modern</h2>
+                <p class="text-lg text-sky-500">Designed with the latest design trends in mind, Azul icons fit perfectly in any modern application.</p>
+            </div>
+            <div class="md:w-1/3 p-8 rounded-xl rounded-e-4xl bg-white md:mt-0 mt-3">
+                <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
+                    <span class="az-ico:flag-morocco text-blue-100 text-xl"></span>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 text-sky-500">Proudly Moroccan</h2>
+                <p class="text-lg text-sky-400">Icons inspired by the rich cultural heritage of Morocco, bringing traditional motifs into the digital realm.</p>
+            </div>  
+        </div>
+    </div>
 </div>
 
-<div in:fly={{ y: 15 }} class="flex not-md:flex-col md:mx-30 mx-8">
-    <div class="md:w-1/3 p-8 rounded-4xl bg-blue-100 md:me-3 md:mt-0 mt-3">
-        <div class="bg-blue-600 rounded-xl flex items-center justify-center size-12 mb-3">
-            <span class="az-ico:riads text-blue-100 text-xl"></span>
-        </div>
-        <h2 class="text-xl text-blue-600 font-semibold mb-2">Universal</h2>
-        <p class="text-lg text-blue-500">Icons that are framework and environment agnostic, you only need a script tag and you're good to go!</p>
-    </div>
-    <div class="md:w-1/3 p-8 rounded-4xl bg-sky-100 md:me-3 md:mt-0 mt-3">
-        <div class="bg-sky-600 rounded-xl flex items-center justify-center size-12 mb-3">
-            <span class="az-ico:appearance text-blue-100 text-xl"></span>
-        </div>
-        <h2 class="text-xl font-semibold mb-2 text-sky-600 md:mt-0 mt-3">Sleek & Modern</h2>
-        <p class="text-lg text-sky-500">Designed with the latest design trends in mind, Azul icons fit perfectly in any modern application.</p>
-    </div>
-    <div class="md:w-1/3 p-8 rounded-4xl bg-cyan-100/50 md:mt-0 mt-3">
-        <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
-            <span class="az-ico:flag-morocco text-blue-100 text-xl"></span>
-        </div>
-        <h2 class="text-xl font-semibold mb-2 text-sky-500">Proudly Moroccan</h2>
-        <p class="text-lg text-sky-400">Icons inspired by the rich cultural heritage of Morocco, bringing traditional motifs into the digital realm.</p>
-    </div>
-</div>
+<style>
+
+@import "tailwindcss";
+
+.orderIcons > span {
+    font-size: 1.65rem;
+    &:nth-child(1) {
+        color: theme(--color-sky-200);
+        margin-inline-end: 0.25rem;
+        font-size: 1rem;
+    }
+    &:nth-child(2) {
+        color: theme(--color-blue-300);
+        margin-inline-end: 0.3rem;
+        font-size: 1.5rem;
+    }
+    &:nth-child(3) {
+        color: theme(--color-blue-400);
+        margin-inline-end: 0.5rem;
+    }
+    &:nth-child(5) {
+        color: theme(--color-blue-400);
+        margin-inline-start: 0.5rem;
+    }
+    &:nth-child(6) {
+        color: theme(--color-blue-300);
+        margin-inline-start: 0.3rem;
+        font-size: 1.5rem;
+    }
+    &:nth-child(7) {
+        color: theme(--color-sky-200);
+        margin-inline-start: 0.25rem;
+        font-size: 1rem;
+    }
+}
+
+.gradientBlue {
+    background: #ffffff;
+    background: radial-gradient(circle at 50% -100%, transparent 70%, #d6f5ff 100%);
+}
+
+</style>
