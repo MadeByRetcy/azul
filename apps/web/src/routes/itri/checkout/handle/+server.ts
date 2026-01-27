@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit"
 import type { RequestHandler } from "./$types"
-import { env } from "$env/static/private"
+import { env } from "$env/dynamic/private"
 
 export const POST: RequestHandler = async ({ request, locals: { supabase, safeGetSession } }) => {
 	// Verify user is authenticated
