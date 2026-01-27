@@ -1,6 +1,6 @@
 import { redirect } from "@sveltejs/kit"
 import type { PageServerLoad } from "./$types"
-import { PADDLE_API_KEY, PADDLE_API_URL } from "$env/static/private"
+import { env } from "$env/dynamic/private"
 
 export const load: PageServerLoad = async ({ locals: { safeGetSession, supabase } }) => {
 	const { session } = await safeGetSession()
@@ -30,12 +30,12 @@ export const load: PageServerLoad = async ({ locals: { safeGetSession, supabase 
 	}
 
 	const paddleResponse = await fetch(
-		`https://${PADDLE_API_URL}.paddle.com/customers/${subscription.cust_id}/portal-sessions`,
+		`https://${env.PADDLE_API_URL}.paddle.com/customers/${subscription.cust_id}/portal-sessions`,
 		{
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${PADDLE_API_KEY}`
+				Authorization: `Bearer ${env.PADDLE_API_KEY}`
 			}
 		}
 	)
