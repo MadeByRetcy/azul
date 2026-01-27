@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit"
 import type { RequestHandler } from "./$types"
-import { PADDLE_API_KEY, PADDLE_API_URL } from "$env/static/private"
+import { env } from "$env/static/private"
 
 export const POST: RequestHandler = async ({ request, locals: { supabase, safeGetSession } }) => {
 	// Verify user is authenticated
@@ -45,12 +45,12 @@ export const POST: RequestHandler = async ({ request, locals: { supabase, safeGe
 	   Using sandbox-api for sandbox mode.
 	*/
 	const paddleResponse = await fetch(
-		`https://${PADDLE_API_URL}.paddle.com/subscriptions?customer_id=${cust_id}`,
+		`https://${env.PADDLE_API_URL}.paddle.com/subscriptions?customer_id=${cust_id}`,
 		{
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${PADDLE_API_KEY}`
+				Authorization: `Bearer ${env.PADDLE_API_KEY}`
 			}
 		}
 	)
