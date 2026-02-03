@@ -87,9 +87,9 @@
 		<img src="/author.webp" alt="Made by Retcy Logo" class="h-3 md:h-4" />
 		<p>&copy; {new Date().getFullYear()}, All rights reserved</p>
 		<p>
-			<a href="/docs/privacy" class="underline">Privacy Policy</a>
+			<a href="https://github.com/MadeByRetcy/azul/blob/stable/packages/docs/PRIVACY_POLICY.md" class="underline">Privacy Policy</a>
 			·
-			<a href="/docs/license" class="underline">License Agreement</a>
+			<a href="https://github.com/MadeByRetcy/azul/blob/stable/packages/docs/LICENSE_AGREEMENT.md" class="underline">License Agreement</a>
 		</p>
 	</div>
 

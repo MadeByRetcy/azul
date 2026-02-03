@@ -1,3 +1,5 @@
+# Privacy Policy
+
 **Last revision:** 3rd of February 2026
 
 # Introduction
