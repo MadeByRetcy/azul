@@ -69,23 +69,10 @@
 				<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
 				<span class="hidden md:inline">Docs</span>
 			</a>
-			<!-- <a href="https://github.com/MadeByRetcy/azul" class="me-4 flex items-center md:me-8">
-				<span class="me-1 icon-[charm--github] text-blue-500"></span>
-				<span class="hidden md:inline">Github</span>
-			</a> -->
-			<!-- <a
-				href={data.session ? "/itri/dashboard" : "/itri"}
-				class="flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
-			>
-				<span class="me-1 icon-[charm--north-star] text-sky-200"></span>
-				<span>
-					{#if data.session}
-						<span class="font-semibold">Itri</span> dashboard
-					{:else}
-						Go <span class="font-semibold">Itri</span>
-					{/if}
-				</span>
-			</a> -->
+			<span class="mx-4 md:mx-8 text-slate-300">|</span>
+			<a href="https://discord.gg/sWpCeBt5jF" aria-label="Discord Server" title="Join our Discord server!" class="flex items-center">
+				<span class="icon-[mingcute--discord-fill] text-2xl text-blue-500"></span>
+			</a>
 		</div>
 	{/if}
 

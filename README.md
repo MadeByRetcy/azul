@@ -7,6 +7,7 @@
 
 <h1 align="center">Azul</h1>
 <p align="center">
+    <img alt="Discord" src="https://img.shields.io/discord/1468215550537764884?logo=discord&logoColor=white&label=Discord%20Server&color=5865f2">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/madebyretcy/azul?logo=github&label=Latest%20commit">
     <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/madebyretcy/azul?logo=github&label=Issues&color=blue">
     <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/madebyretcy/azul?logo=github&label=Contributors&color=gold">
