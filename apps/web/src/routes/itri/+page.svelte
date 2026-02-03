@@ -21,7 +21,7 @@
         <li class="flex items-center"><span class="text-sky-500 az-ico:content-create me-2 text-lg"></span> Suggest new icons</li>
         <li class="flex items-center"><span class="text-sky-500 az-ico:donation me-2 text-lg"></span> Support us</li>
     </ul>
-    <button onclick={() => goto("/itri/auth")} class="bg-blue-500 mt-6 py-3 text-lg w-full flex items-center justify-center text-white rounded-full font-semibold hover:bg-blue-600 transition-colors">
+    <button onclick={() => alert("Coming in V2")} class="bg-blue-500 mt-6 py-3 text-lg w-full flex items-center justify-center text-white rounded-full font-semibold hover:bg-blue-600 transition-colors">
         <span class="icon-[charm--arrow-right] text-sky-200 me-1"></span>
         <span>Get Started</span>
     </button>
