@@ -67,7 +67,7 @@
 			</a>
 			<a href="/docs" class="flex items-center">
 				<span class="me-1 icon-[charm--book-open] text-blue-500"></span>
-				<span class="hidden md:inline">Docs</span>
+				<span>Docs</span>
 			</a>
 			<span class="mx-4 md:mx-8 text-slate-300">|</span>
 			<a href="https://discord.gg/sWpCeBt5jF" aria-label="Discord Server" title="Join our Discord server!" class="flex items-center">

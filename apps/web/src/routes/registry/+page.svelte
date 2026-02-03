@@ -26,8 +26,8 @@
             </button>
         </div>
     </div>
-    <div in:fly={{ y: 15 }} class="flex items-start w-full">
-        <div class="w-1/3 flex flex-col pe-8 sticky top-5">
+    <div in:fly={{ y: 15 }} class="flex md:flex-row flex-col items-start w-full">
+        <div class="md:w-1/3 w-full flex flex-col md:pe-8 mb-6 md:sticky top-5">
             {#if typeof chosenIcon === "number"}
                 <div class="w-full h-42 flex items-center justify-center bg-sky-50 rounded-2xl">
                     {#if showIcon}
@@ -88,14 +88,14 @@
                 </div>
             {/if}
         </div>
-        <div class="flex justify-center rounded-2xl bg-slate-100 border border-slate-200 w-2/3 overflow-hidden">
+        <div class="flex justify-center rounded-2xl bg-slate-100 border border-slate-200 md:w-2/3 w-full overflow-hidden">
             <div class="flex h-full overflow-hidden flex-wrap rounded-lg">
                 {#each data.lineIcons as icon, i}
                     <button onclick={() => {
                             chosenIcon = i
                             showIcon = false
                             setTimeout(() => showIcon = true, 25)
-                        }} class="{ viewMode === "grid" ? "md:w-1/4 w-1/3" : "md:w-1/3 w-1/2"} transition-all {
+                        }} class="{ viewMode === "grid" ? "w-1/4" : "w-1/3"} transition-all {
                         viewMode === "grid" ? 
                             i >= data.lineIcons.length - 4 ? null : "border-b border-b-slate-200"
                             :
@@ -106,9 +106,9 @@
                             :
                             i > 0 && (i + 1) % 3 === 0 ? null: "border-e border-e-slate-200"
                         }">
-                        <div class="flex transition-all bg-white { viewMode === "grid" ? "flex-col py-6 md:px-2" : "justify-between py-4 px-6"} items-center">
+                        <div class="flex transition-all bg-white { viewMode === "grid" ? "flex-col py-6 md:px-2" : "justify-between py-4 md:px-6 px-2"} items-center">
                             <span 
-                                class="text-4xl az-ico:{icon.name} text-blue-700 {viewMode === "grid" ? "mb-2.5" : null}"
+                                class="md:text-4xl text-2xl az-ico:{icon.name} text-blue-700 {viewMode === "grid" ? "mb-2.5" : null}"
                             >
                             </span>
                             <p class="md:text-xs text-[0.5rem] {viewMode === "grid" ? "mt-2" : null} font-sans text-slate-500">{icon.name}</p>
