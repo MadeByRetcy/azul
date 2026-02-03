@@ -60,7 +60,7 @@
                             <span class="icon-[charm--copy] text-blue-400"></span>
                         </button>
                     </div>
-                    <code class="block text-nowrap w-full">
+                    <code class="block text-nowrap w-full overflow-scroll pb-2">
                         <span class="text-slate-400">&lt;</span><span class="text-blue-500">span</span> class<span class="text-slate-400">=</span><span class="text-sky-500">"az-ico:{data.lineIcons[chosenIcon].name}"</span><span class="text-slate-400">&gt;</span><span class="text-slate-400">&lt;/</span><span class="text-blue-500">span</span><span class="text-slate-400">&gt;</span>
                     </code>
                 </div>
