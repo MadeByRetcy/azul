@@ -27,7 +27,7 @@
                 class="flex items-center rounded-full hover:*:first:animate-spin bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
             >
                 <span class="me-2 icon-[charm--north-star] text-sky-200"></span>
-                <span>
+                <span class="text-nowrap">
                     {#if session}
                         <span class="font-semibold">Itri</span> Dashboard
                     {:else}
