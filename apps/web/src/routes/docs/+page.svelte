@@ -1,24 +1,18 @@
 <script lang="ts">
+	import { page } from "$app/state"
 	import { fly } from "svelte/transition"
 
-    let status: string | null = $state(null)
+    let status: number | null = $state(null)
 
     const textToCopy = `\n
         \<script defer src="https://azul.msharf.in/script/main.js"\>\</script\>
         <link rel="stylesheet" href="https://azul.msharf.in/script/main.css">\n
     `
+
+    // Just for better UX
+    $effect(() => {setTimeout(() => status = null, 5000)})
 </script>
 
-    
-<!-- <div in:fly={{ y: 15 }} class="md:mx-30 mx-8 z-0 flex flex-1 pb-6 pt-6 flex-col items-center justify-center">
-
-    <h1 class="text-3xl text-center font-bold">
-        Have questions?
-        We got answers!
-    </h1>
-    <p class="text-lg text-slate-400 mt-2 text-center">Everything you need about Azul and Azul Itri subscription.</p>
-
-</div> -->
 
 <div in:fly={{ y: 15 }} class="md:mx-30 mx-8 mt-4 md:mt-0">
     <h1 class="flex items-center text-2xl font-semibold mb-3">
@@ -35,10 +29,10 @@
         </code>
         <button onclick={() => {
             navigator.clipboard.writeText(textToCopy)
-            status = "copied"
-        }} class="px-3 py-1 flex items-center border-2 border-blue-400 rounded-lg">
-            <span class="icon-[charm--link-external] me-2 text-sky-500"></span>
-            <span>{!status ? "Copy" : "Copied!"}</span>
+            status = 1
+        }} class="px-3 py-1 flex items-center border-2 border-blue-300 rounded-lg">
+            <span class="icon-[charm--copy] me-2 text-sky-500"></span>
+            <span class="text-blue-600 font-medium">{status === 1 ? "Copied!" : "Copy"}</span>
         </button>
     </div>
 
@@ -46,8 +40,17 @@
 
     <div class="bg-sky-50 flex items-center justify-between rounded-2xl p-5 mt-4">
         <code class="block">
-            <span class="text-slate-400">&lt;</span><span class="text-blue-500">span</span> class<span class="text-slate-400">=</span><span class="text-sky-500">"az-ico:icon-name [...]"</span><span class="text-slate-400">&gt;</span><span class="text-slate-400">&lt;/</span><span class="text-blue-500">span</span><span class="text-slate-400">&gt;</span>
+            <span class="text-slate-400">&lt;</span><span class="text-blue-600">span</span> class<span class="text-slate-400">=</span><span class={page.url.searchParams.get("ic")? "text-blue-500 animate-pulse font-semibold" :"text-sky-500"}>"az-ico:{page.url.searchParams.get("ic") ? page.url.searchParams.get("ic"): "icon-name [...]"}"</span><span class="text-slate-400">&gt;</span><span class="text-slate-400">&lt;/</span><span class="text-blue-500">span</span><span class="text-slate-400">&gt;</span>
         </code>
+        {#if page.url.searchParams.get("ic")}
+            <button onclick={() => {
+                navigator.clipboard.writeText(`<span class="az-ico:${page.url.searchParams.get("ic")}"></span>`)
+                status = 2
+            }} aria-label="Copy" class="px-3 py-1 flex items-center border-2 border-blue-300 rounded-lg">
+                <span class="icon-[charm--copy] me-2 text-sky-500"></span>
+                <span class="text-blue-600 font-medium">{status === 2 ? "Copied!" : "Copy"}</span>
+            </button>
+        {/if}
     </div>
 
     <h1 class="flex items-center text-2xl font-semibold mb-3 mt-6">
@@ -55,5 +58,5 @@
         <span>Have issues?</span>
     </h1>
 
-    <p>If you encounter any issues or have questions, feel free to reach out to us on our <a class="text-blue-600 underline" href="https://github.com/madebyretcy/azul/issues">GitHub</a>.</p>
+    <p>If you encounter any issues or have questions, feel free to reach out to us on our <a class="text-blue-600 underline" href="https://github.com/madebyretcy/azul/issues">GitHub</a> or <a class="text-blue-600 underline" href="https://discord.gg/sWpCeBt5jF">Discord server</a>.</p>
 </div>
