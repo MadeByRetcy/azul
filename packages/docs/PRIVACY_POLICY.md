@@ -2,14 +2,14 @@
 
 **Last revision:** 3rd of February 2026
 
-# Introduction
+# 1. Introduction
 This privacy policy describes how Azul collects and uses your personal information when you visit the website (azul.msharf.in) provided by Msharfin, both projects under Made by Retcy.
 
 Made by Retcy is a Moroccan entity operating under Moroccan law, including laws related to the processing of personal data (See law no. 09-08). 
 
 ---
 
-# Collected data and information
+# 2. Collected data and information
 Azul uses OAuth 2.0 (With Github & Msharfin as provided), as such it collects/stores the following types of personal information from you:
 - E-mail address
 - OAuth Provider Data:
@@ -23,12 +23,12 @@ All personal data is encrypted and protected from any unauthorized non Made by R
 
 ---
 
-# User rights
+# 3. User rights
 Azul users have the same rights as Moroccan law no. 09-08 provides, to exercise any of these rights, please contact us via E-mail [support@msharf.in](mailto:support@msharf.in).
 
 ---
 
-# Data Security
+# 4. Data Security
 We try our best to take steps to protect your data from unauthorized access, use, disclosure, alteration, or destruction. These steps include:
 
 - Using industry-standard security measures, such as encryption.
@@ -38,5 +38,5 @@ Please note that these security measures won’t necessarily mean immunity from 
 
 ---
 
-# Changes to the privacy policy
+# 5. Changes to the privacy policy
 We may update this privacy policy from time to time, and contact you whenever it’s updated. The most recent version will always be posted on the repository. 
