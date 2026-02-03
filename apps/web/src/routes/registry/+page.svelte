@@ -17,11 +17,11 @@
             <span class="icon-[charm--layout-dashboard] me-2 text-blue-600"></span>
             <span class="font-semibold">Icon Registry</span>
         </h1>
-        <div class="flex md:text-2xl text-lg items-center text-slate-500 me-3">
-            <button onclick={() => viewMode = "grid"} aria-label="Grid View" class="me-2 md:p-4 px-2 transition-all border-b-2 {viewMode === "grid" ? "border-b-blue-600 text-sky-500" : "border-b-transparent"}">
+        <div class="flex md:text-2xl text-xl items-center text-slate-500 me-3">
+            <button onclick={() => viewMode = "grid"} aria-label="Grid View" class="me-2 p-4 transition-all border-b-2 {viewMode === "grid" ? "border-b-blue-600 text-sky-500" : "border-b-transparent"}">
                 <span class="icon-[charm--layout-grid]"></span>
             </button>
-            <button onclick={() => viewMode = "rows"} aria-label="Rows View" class="md:p-4 px-2 transition-all border-b-2 {viewMode === "rows" ? "border-b-blue-600 text-sky-500" : "border-b-transparent"}">
+            <button onclick={() => viewMode = "rows"} aria-label="Rows View" class="p-4 transition-all border-b-2 {viewMode === "rows" ? "border-b-blue-600 text-sky-500" : "border-b-transparent"}">
                 <span class="icon-[charm--layout-rows]"></span>       
             </button>
         </div>

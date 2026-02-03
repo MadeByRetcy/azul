@@ -93,7 +93,7 @@
 		</p>
 	</div>
 
-	<img src="/morocco.webp" class="h-6 md:h-10" alt="Made in Morocco" />
+	<img src="/morocco.webp" class="h-5 md:h-10" alt="Made in Morocco" />
 </footer>
 
 <style>

@@ -6,18 +6,18 @@
 </script>
 
 
-<div in:fly={{ y: 15 }} class="gradientBlue md:px-30 px-8 z-0 flex flex-1 pb-18 pt-10 flex-col">
+<div in:fly={{ y: 15 }} class="gradientBlue md:px-30 px-8 z-0 flex flex-1 md:pb-18 pb-9 pt-10 flex-col">
 
     <div class="flex flex-col items-center justify-center mb-24">
         <div class="text-sm w-fit font-bold font-mono tracking-widest flex items-center px-4 py-1 rounded-full bg-amber-100 mb-2 text-amber-500">
             <span class="me-2 icon-[charm--conical-flask] text-amber-500"></span>
             <span>BETA</span>
         </div>
-        <h1 class="text-4xl font-bold text-center">
+        <h1 class="md:text-4xl text-3xl font-bold text-center">
             Make Your Apps <br>
             Feel More Familiar
         </h1>
-        <p class="text-lg text-slate-400 mb-4 mt-1 text-center">With <b>Azul</b>, The Modern & Culturally Inspired Icon Pack.</p>
+        <p class="md:text-lg text-slate-400 mb-4 mt-1 text-center">With <b>Azul</b>, The Modern & Culturally Inspired Icon Pack.</p>
         <div class="flex items-center orderIcons">
             <span class="az-ico:content-repost"></span>
             <span class="az-ico:riads"></span>
@@ -44,22 +44,22 @@
         </p>
     </div>
 
-    <div in:fly={{ y: 15 }} class="flex items-center justify-center text-sky-600/50">
+    <div in:fly={{ y: 15 }} class="flex flex-col md:flex-row md:flex-none items-center justify-center text-sky-600/50">
         <h2 class="uppercase text-sm font-semibold tracking-widest">Used by great people like</h2>
-        <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="h-4 mx-3 brightness-10">
+        <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="h-4 md:mx-3 md:my-0 my-1.5 brightness-10">
         <h2 class="uppercase text-sm font-semibold tracking-widest">and You</h2>
     </div>
 </div>
 
 <div in:fly={{ y: 15 }} class="bg-linear-to-b from-[#d6f5ff] to-transparent px-6">
-    <div class="bg-blue-500 md:px-24 px-8 md:py-14 flex flex-col items-center rounded-4xl">
-        <h1 class="font-semibold items-center flex-col text-white text-2xl mb-12 flex">
+    <div class="bg-blue-500 md:px-24 px-8 md:py-14 py-8 flex flex-col items-center rounded-4xl">
+        <h1 class="font-semibold items-center text-center flex-col text-white md:text-2xl text-lg md:mb-12 mb-6 flex">
             <span>Empowering The Moroccan Digital Transition</span>
             <span class="text-sky-300 text-3xl icon-[mingcute--down-line]"></span>
         </h1>
 
         <div class="flex not-md:flex-col">
-            <div class="md:w-1/3 p-8 rounded-xl rounded-s-4xl bg-blue-50 md:me-3 md:mt-0 mt-3">
+            <div class="md:w-1/3 p-8 rounded-xl md:rounded-s-4xl rounded-t-4xl bg-blue-50 md:me-3 md:mt-0 mt-3">
                 <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:riads text-blue-100 text-xl"></span>
                 </div>
@@ -73,7 +73,7 @@
                 <h2 class="text-xl font-semibold mb-2 text-sky-500 md:mt-0 mt-3">Sleek & Modern</h2>
                 <p class="text-lg text-sky-500">Designed with the latest design trends in mind, Azul icons fit perfectly in any modern application.</p>
             </div>
-            <div class="md:w-1/3 p-8 rounded-xl rounded-e-4xl bg-white md:mt-0 mt-3">
+            <div class="md:w-1/3 p-8 rounded-xl md:rounded-e-4xl rounded-b-4xl bg-white md:mt-0 mt-3">
                 <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:flag-morocco text-blue-100 text-xl"></span>
                 </div>
