@@ -59,7 +59,7 @@
         </h1>
 
         <div class="flex not-md:flex-col">
-            <div class="md:w-1/3 p-8 rounded-xl md:rounded-s-4xl rounded-t-4xl bg-blue-50 md:me-3 md:mt-0 mt-3">
+            <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-50 md:me-3 md:mt-0 mt-3">
                 <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:riads text-blue-100 text-xl"></span>
                 </div>
@@ -73,7 +73,7 @@
                 <h2 class="text-xl font-semibold mb-2 text-sky-500 md:mt-0 mt-3">Sleek & Modern</h2>
                 <p class="text-lg text-sky-500">Designed with the latest design trends in mind, Azul icons fit perfectly in any modern application.</p>
             </div>
-            <div class="md:w-1/3 p-8 rounded-xl md:rounded-e-4xl rounded-b-4xl bg-white md:mt-0 mt-3">
+            <div class="md:w-1/3 p-8 rounded-xl md:rounded-e-4xl rounded-b-4xl md:rounded-bl-xl  bg-white md:mt-0 mt-3">
                 <div class="bg-sky-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:flag-morocco text-blue-100 text-xl"></span>
                 </div>
