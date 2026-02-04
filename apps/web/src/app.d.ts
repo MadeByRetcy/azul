@@ -14,7 +14,13 @@ declare global {
       session: Session | null
     }
     // interface PageState {}
-    // interface Platform {}
+    interface Platform {
+      env: {
+        AZUL_ICON_LIMITER: { 
+          limit: (options: { key: string }) => Promise<{ success: boolean }> 
+        }
+      }
+    }
   }
 }
 

@@ -15,5 +15,15 @@
 	"observability": {
 		"enabled": true,
 		"head_sampling_rate": 1
-	}
+	},
+	"ratelimits": [
+		{
+		  "name": "AZUL_ICON_LIMITER",
+		  "namespace_id": "1001",
+		  "simple": {
+			"limit": 75,
+			"period": 60
+		  }
+		}
+	]
 }
