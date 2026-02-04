@@ -28,7 +28,7 @@
             provider: "github",
             options: {
                 scopes: "read:user user:email",
-                redirectTo: `${page.url.origin}/itri/dashboard`
+                redirectTo: `${page.url.origin}/itri/auth/callback`
             }
         })} aria-label="Github" class="select-none w-42 flex items-center justify-center font-medium py-3 rounded-lg border border-slate-300">
             <span class="icon-[logos--github] text-lg"></span>
