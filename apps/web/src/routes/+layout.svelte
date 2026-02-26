@@ -5,6 +5,7 @@
 
 	import { navigating, page } from "$app/state"
 	import { goto } from "$app/navigation"
+	import { version } from "$app/environment"
 
 	let { children, data } = $props()
 	let { supabase } = $derived(data)
@@ -87,13 +88,17 @@
 		<img src="/author.webp" alt="Made by Retcy Logo" class="h-3 md:h-4" />
 		<p>&copy; {new Date().getFullYear()}, All rights reserved</p>
 		<p>
+			<a href="https://github.com/MadeByRetcy/azul/commit/{version}" class="font-medium">v1.0-beta@{version.slice(0,7)}</a>
+			·
+			<a href="mailto:support@msharf.in" class="underline">Contact us</a>
+			<br>
 			<a href="https://github.com/MadeByRetcy/azul/blob/stable/packages/docs/PRIVACY_POLICY.md" class="underline">Privacy Policy</a>
 			·
 			<a href="https://github.com/MadeByRetcy/azul/blob/stable/packages/docs/LICENSE_AGREEMENT.md" class="underline">License Agreement</a>
 		</p>
 	</div>
 
-	<img src="/morocco.webp" class="h-5 md:h-10" alt="Made in Morocco" />
+	<img src="/morocco.webp" class="h-6 md:h-10" alt="Made in Morocco" />
 </footer>
 
 <style>
