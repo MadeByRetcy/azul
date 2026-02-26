@@ -1,21 +1,53 @@
 import { fetchIconByName } from "@azul/icons"
 import type { RequestHandler } from "./$types"
 import { error } from "@sveltejs/kit"
+import { ENV_MODE } from "$env/static/private"
 
-export const GET: RequestHandler = async ({ url, platform, getClientAddress }) => {
-    // Rate Limit Check
-    if (platform) {
-        const ip = getClientAddress()
-        const { success } = await platform.env.AZUL_ICON_LIMITER.limit({ key: ip })
-        if (!success) {
-            throw error(429, "Too many requests")
-        }
-    }
+export const GET: RequestHandler = async ({
+	request,
+	url,
+	platform,
+	getClientAddress,
+	locals: { supabase }
+}) => {
+	const clientId = url.searchParams.get("client_id")
+	const ip = getClientAddress()
+	const origin = request.headers.get("origin") || ""
 
-	const data = fetchIconByName(url.searchParams.get("ic") || "")
+	// 1. Determine Limiter & Tier
+	const limiter =
+		platform &&
+		(clientId && ENV_MODE !== "dev"
+			? platform.env.ITRI_ICON_LIMITER
+			: platform.env.FREE_ICON_LIMITER)
+
+    if (!limiter) throw error(500, "Rate limiter not configured")
+
+	const { success } = await limiter.limit({ key: ip })
+	if (!success) throw error(429, "Too many requests")
+
+	if (clientId) {
+		const { data: client, error: dbError } = await supabase
+			.from("clients")
+			.select("metadata")
+			.eq("id", clientId)
+			.single()
+
+		if (dbError || !client) throw error(401, "Invalid Client")
+
+		const allowedHosts = client.metadata?.allowed_hosts || []
+		if (!allowedHosts.includes(origin)) {
+			throw error(403, "Origin Unauthorized")
+		}
+	}
+
+	const iconName = url.searchParams.get("ic")
+	if (!iconName) throw error(400, "Missing icon name")
+
+	const data = fetchIconByName(iconName)
 
 	if (data) {
-		return new Response(Buffer.from(data, 'base64'), {
+		return new Response(Buffer.from(data, "base64"), {
 			headers: {
 				"Content-Type": "image/svg+xml",
 				"Access-Control-Allow-Origin": "*"

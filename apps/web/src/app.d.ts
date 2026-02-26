@@ -16,7 +16,10 @@ declare global {
     // interface PageState {}
     interface Platform {
       env: {
-        AZUL_ICON_LIMITER: { 
+        FREE_ICON_LIMITER: { 
+          limit: (options: { key: string }) => Promise<{ success: boolean }> 
+        },
+        ITRI_ICON_LIMITER: { 
           limit: (options: { key: string }) => Promise<{ success: boolean }> 
         }
       }
