@@ -19,6 +19,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.91.1
         version: 2.91.1
+      string-comparison:
+        specifier: ^1.3.0
+        version: 1.3.0
     devDependencies:
       '@azul/icons':
         specifier: workspace:*
@@ -1453,6 +1456,10 @@ packages:
   std-env@3.10.0:
     resolution: {integrity: sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==}
 
+  string-comparison@1.3.0:
+    resolution: {integrity: sha512-46aD+slEwybxAMPRII83ATbgMgTiz5P8mVd7Z6VJsCzSHFjdt1hkAVLeFxPIyEb11tc6ihpJTlIqoO0MCF6NPw==}
+    engines: {node: ^16.0.0 || >=18.0.0}
+
   supports-color@10.2.2:
     resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
     engines: {node: '>=18'}
@@ -2783,6 +2790,8 @@ snapshots:
   stackback@0.0.2: {}
 
   std-env@3.10.0: {}
+
+  string-comparison@1.3.0: {}
 
   supports-color@10.2.2: {}
 

@@ -1,6 +1,6 @@
 
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { goto, invalidate } from '$app/navigation';
 
     const { data } = $props()
     const { session, supabase, paddleDash } = $derived(data)
@@ -20,6 +20,7 @@
         <button onclick={
             async () => {
                 await supabase.auth.signOut()
+                invalidate("supabase:auth")
                 goto("/")
             }
         } class="border-amber-500 border py-2 px-4 rounded-xl flex items-center justify-center mb-3 text-amber-500">
