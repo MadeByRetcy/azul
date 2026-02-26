@@ -28,10 +28,10 @@
             >
                 <span class="me-2 icon-[charm--north-star] text-sky-200"></span>
                 <span class="text-nowrap">
-                    {#if session}
+                    {#if session?.access_token}
                         <span class="font-semibold">Itri</span> Dashboard
                     {:else}
-                        Subscribe to <span class="font-semibold">Itri</span>
+                        Get more with <span class="font-semibold">Itri</span>
                     {/if}
                 </span>
             </a> 
@@ -45,9 +45,9 @@
     </div>
 
     <div in:fly={{ y: 15 }} class="flex flex-col md:flex-row md:flex-none items-center justify-center text-sky-600/50">
-        <h2 class="uppercase text-sm font-semibold tracking-widest">Used by great people like</h2>
+        <h2 class="uppercase text-sm font-semibold tracking-widest">Used in projects like</h2>
         <img src="/msharfin.webp" alt="Msharfin Logo" title="https://msharf.in - Msharfin" class="h-4 md:mx-3 md:my-0 my-1.5 brightness-10">
-        <h2 class="uppercase text-sm font-semibold tracking-widest">and You</h2>
+        <h2 class="uppercase text-sm font-semibold tracking-widest">and Yours</h2>
     </div>
 </div>
 
