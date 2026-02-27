@@ -1,7 +1,7 @@
 import { fetchIconByName } from "@azul/icons"
 import type { RequestHandler } from "./$types"
 import { error } from "@sveltejs/kit"
-import { ENV_MODE } from "$env/static/private"
+import { env } from "$env/dynamic/private"
 
 export const GET: RequestHandler = async ({
 	request,
@@ -17,7 +17,7 @@ export const GET: RequestHandler = async ({
 	// 1. Determine Limiter & Tier
 	const limiter =
 		platform &&
-		(clientId && ENV_MODE !== "dev"
+		(clientId && env.ENV_MODE !== "dev"
 			? platform.env.ITRI_ICON_LIMITER
 			: platform.env.FREE_ICON_LIMITER)
 
