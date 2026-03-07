@@ -15,7 +15,7 @@
           if (match) {
               const iconName = match[0].split(':')[1];
               const url = `${
-                window.location.origin.startsWith('http://localhost') ? window.location.origin : 'https://azul.msharf.in'
+                'https://azul.msharf.in'
               }/registry/fetch?ic=${iconName}`;
               // Using webkitMaskImage for compatibility 
               element.style.webkitMaskImage = `url(${url})`;
