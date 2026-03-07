@@ -14,9 +14,8 @@
           const match = element.className.match(regex);
           if (match) {
               const iconName = match[0].split(':')[1];
-              // TODO: Dynamic URL based on environment (Localhost vs Production)
               const url = `${
-                window.location.origin
+                window.location.origin.startsWith('http://localhost') ? window.location.origin : 'https://azul.msharf.in'
               }/registry/fetch?ic=${iconName}`;
               // Using webkitMaskImage for compatibility 
               element.style.webkitMaskImage = `url(${url})`;
