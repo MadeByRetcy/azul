@@ -9,7 +9,7 @@
 <div in:fly={{ y: 15 }} class="gradientBlue md:px-30 px-8 z-0 flex flex-1 md:pb-18 pb-9 pt-10 flex-col">
 
     <div class="flex flex-col items-center justify-center mb-24">
-        <div class="text-sm w-fit font-bold font-mono tracking-widest flex items-center px-4 py-1 rounded-full bg-amber-100 mb-2 text-amber-500">
+        <div class="text-[0.9rem] w-fit font-bold font-mono tracking-widest flex items-center px-3 py-0.5 rounded-full bg-amber-100 mb-2 text-amber-500">
             <span class="me-2 icon-[charm--conical-flask] text-amber-500"></span>
             <span>BETA</span>
         </div>
@@ -55,11 +55,23 @@
     <div class="bg-blue-500 md:px-24 px-8 md:py-14 py-8 flex flex-col items-center rounded-4xl">
         <h1 class="font-semibold items-center text-center flex-col text-white md:text-2xl text-lg md:mb-12 mb-6 flex">
             <span>Empowering The Moroccan Digital Transition</span>
-            <span class="text-sky-300 text-3xl icon-[mingcute--down-line]"></span>
+            <span class="text-sky-300 text-3xl mt-2 animate-bounce icon-[mingcute--down-line]"></span>
         </h1>
 
         <div class="flex not-md:flex-col">
-            <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-50 md:me-3 md:mt-0 mt-3">
+            {#snippet insights(icon: string, title: string, desc: string, colors: {
+                title: string,
+                desc: string
+            })}
+                <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-50 md:me-3 md:mt-0 mt-3">
+                    <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
+                        <span class="az-ico:riads text-blue-100 text-xl"></span>
+                    </div>
+                    <h2 class="text-xl text-blue-500 font-semibold mb-2">Universal</h2>
+                    <p class="text-lg text-blue-400">Icons that are framework and environment agnostic, you only need a script tag and you're good to go!</p>
+                </div>
+            {/snippet}
+            <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-100/75 md:me-3 md:mt-0 mt-3">
                 <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:riads text-blue-100 text-xl"></span>
                 </div>

@@ -61,7 +61,7 @@
                                 <span class="icon-[charm--copy] text-blue-400"></span>
                             </button>
                         </div>
-                        <code class="block text-nowrap w-full overflow-scroll pb-2">
+                        <code class="block text-nowrap w-full overflow-x-auto pb-2">
                             <span class="text-blue-300">&lt;</span><span class="text-blue-600">span</span> class<span class="text-blue-300">=</span><span class="text-sky-500">"az-ico:{chosenIcon.name}"</span><span class="text-blue-300">&gt;</span><span class="text-blue-300">&lt;/</span><span class="text-blue-600">span</span><span class="text-blue-300">&gt;</span>
                         </code>
                     </div>
@@ -81,7 +81,7 @@
                         </a>
                     </div>
                     <p class="text-xs font-medium flex items-center justify-center text-blue-400 mt-2">
-                        <a href="/itri" class="flex items-center me-1"><span class="icon-[charm--north-star] me-1"></span> <span>Subscribe to Itri</span></a> · <a href="https://github.com/MadeByRetcy/azul" class="underline flex items-center ms-1"><span class="icon-[bi--github] me-1.5"></span> <span>Contribute</span></a> 
+                        <a href="https://github.com/MadeByRetcy/azul" class="underline flex items-center ms-1"><span class="icon-[bi--github] me-1.5"></span> <span>Contribute to Azul</span></a> 
                     </p>
                 </div>
             {:else}
