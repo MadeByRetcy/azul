@@ -59,7 +59,7 @@
         </h1>
 
         <div class="flex not-md:flex-col">
-            <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-100 md:me-3 md:mt-0 mt-3">
+            <div class="md:w-1/3 p-8 rounded-xl rounded-t-4xl md:rounded-s-4xl md:rounded-tr-xl bg-blue-50 md:me-3 md:mt-0 mt-3">
                 <div class="bg-blue-500 rounded-xl flex items-center justify-center size-12 mb-3">
                     <span class="az-ico:riads text-blue-100 text-xl"></span>
                 </div>
